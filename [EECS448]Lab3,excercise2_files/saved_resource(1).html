@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://fiddle.jshell.net/_display/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style id="stndz-style"></style>
+  
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+
+  
+  
+  
+
+  
+
+  <script type="text/javascript" src="./dummy.js.download"></script>
+
+  
+
+  
+
+  
+
+  
+    <link rel="stylesheet" type="text/css" href="./result-light.css">
+  
+
+  
+
+  <style type="text/css">
+    
+  </style>
+
+  <title></title>
+
+  
+    
+
+
+
+
+<script type="text/javascript">//<![CDATA[
+window.onload=function(){
+
+}//]]> 
+
+</script>
+
+  
+</head>
+
+<body>
+  
+	
+		<title> Nick's first web page </title>
+	
+
+	
+            <p id="Bear">
+            This is a bear
+            </p>
+            <img src="./35547428001_5496617938001_5496594922001-vs.jpg" id="Picture">
+            <button type="button" onclick="Back()" id="Back">Back</button>
+            <button type="button" onclick="Next()" id="Next">Next</button>
+            <script type="text/javascript">
+            var num = 0;
+            function Back()
+            {
+            	num--;
+              if(num<0)
+              {
+              	num=4;
+              }
+              GetPic();
+            }
+            function Next()
+            {
+            	num++;
+            	if(num>4)
+              {
+              	num = 0;
+              }
+              GetPic();
+            }
+            function GetPic()
+            { 
+            	switch(num)
+              {
+              	case 0:
+                  document.getElementById("Picture").src="https://c402277.ssl.cf1.rackcdn.com/photos/477/images/story_full_width/shutterstock_83440657.jpg?1345572241";
+                  break;
+                case 1:
+                document.getElementById("Picture").src="https://media.gannett-cdn.com/35547428001/35547428001_5496617938001_5496594922001-vs.jpg";
+                  break;
+                case 2:
+                document.getElementById("Picture").src="https://www.wildrepublic.com/Content/uploads/panda-4-5065.jpg";
+                  break;
+                case 3:
+                document.getElementById("Picture").src="https://media.boingboing.net/wp-content/uploads/2017/06/23GRIZZLY-superJumbo.jpg";
+                	break;
+                case 4:
+                document.getElementById("Picture").src="http://1heurf2kk91pad4b23w0jddl.wpengine.netdna-cdn.com/wp-content/uploads/2016/05/Bear-Grylls.jpeg";
+                	break;
+                 default:
+                 	break;
+              }
+            }
+            </script>
+	
+
+  
+  <script>
+  // tell the embed parent frame the height of the content
+  if (window.parent && window.parent.parent){
+    window.parent.parent.postMessage(["resultsFrame", {
+      height: document.body.getBoundingClientRect().height,
+      slug: "None"
+    }], "*")
+  }
+</script>
+
+
+
+
+
+</body></html>

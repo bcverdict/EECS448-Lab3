@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<title> Nick's first web page </title>
+	</head>
+
+	<body>
+            <p id = "Bear">
+            These are all bears
+            </p>
+            <img src="https://lumiere-a.akamaihd.net/v1/images/gallery_bears_thumbnail_1a557998.jpeg?region=0,0,450,338" id = "Picture" height = "300">
+			<br></br>
+            <button type="button" onClick=Back() id = "Back">Back</button>
+            <button type="button" onClick=Next() id = "Next">Next</button>
+            <script type ="text/javascript">
+            var num = 0;
+            function Back()
+            {
+            	num--;
+              if(num<0)
+              {
+              	num=4;
+              }
+              GetPic();
+            }
+            function Next()
+            {
+            	num++;
+            	if(num>4)
+              {
+              	num = 0;
+              }
+              GetPic();
+            }
+            function GetPic()
+            { 
+            	switch(num)
+              {
+              	case 0:
+                  document.getElementById("Picture").src="https://c402277.ssl.cf1.rackcdn.com/photos/477/images/story_full_width/shutterstock_83440657.jpg?1345572241";
+                  break;
+                case 1:
+                document.getElementById("Picture").src="https://media.gannett-cdn.com/35547428001/35547428001_5496617938001_5496594922001-vs.jpg";
+                  break;
+                case 2:
+                document.getElementById("Picture").src="https://www.wildrepublic.com/Content/uploads/panda-4-5065.jpg";
+                  break;
+                case 3:
+                document.getElementById("Picture").src="https://media.boingboing.net/wp-content/uploads/2017/06/23GRIZZLY-superJumbo.jpg";
+                	break;
+                case 4:
+                document.getElementById("Picture").src="http://1heurf2kk91pad4b23w0jddl.wpengine.netdna-cdn.com/wp-content/uploads/2016/05/Bear-Grylls.jpeg";
+                	break;
+                 default:
+                 	break;
+              }
+            }
+            </script>
+	</body>
+</html>

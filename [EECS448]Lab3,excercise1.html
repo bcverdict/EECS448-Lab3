@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<title> Nick's first web page </title>
+	</head>
+
+	<body>
+            <p id = "Password">
+            Enter your password
+            </p>
+            <button type="button" onClick= Print() id = "Next">Next</button>
+            <input type="text" id = "TextID" onKeyPress="myFunc()">
+            <script type ="text/javascript">
+            var D = "";
+            var str = "";
+            var SecStr = "";
+            var First = true;
+            function myFunc()
+            {
+            	if(First)
+              {
+            		str+=document.getElementById("TextID").value.charAt(document.getElementById("TextID").value.length-1);
+              }
+              else
+              {
+                SecStr+=document.getElementById("TextID").value.charAt(document.getElementById("TextID").value.length-1);
+              }
+                D+="*";
+                document.getElementById("TextID").value = D;
+            }
+            function Print()
+            {
+            		if(str.length+1<8)
+                {
+                alert("Password must be at least 8 characters long");
+                str = "";
+                SecStr = "";
+                D = "";
+                document.getElementById("TextID").value = "";
+                }
+            		else if(First)
+                {
+                  First = false;
+                  D="";
+                  str+=document.getElementById("TextID").value.charAt(document.getElementById("TextID").value.length-1);
+                  document.getElementById("TextID").value = "";
+                  document.getElementById("Password").innerHTML = "Validate Password";
+                  document.getElementById("Next").innerHTML = "Validate";
+                }
+                else
+                {
+                                  SecStr+=document.getElementById("TextID").value.charAt(document.getElementById("TextID").value.length-1);
+
+               
+                	if(str==SecStr)
+                  {
+                  alert("Validated!");
+                  }
+                  else
+                  {
+                  alert("Wrong");
+                  }
+                   str = "";
+                   SecStr = "";
+                   D = "";
+                   First = true;
+                   document.getElementById("TextID").value = "";
+                   document.getElementById("Password").innerHTML = "Enter Password";
+                   document.getElementById("Next").innerHTML = "Next";
+                }
+            }
+            </script>
+	</body>
+</html>

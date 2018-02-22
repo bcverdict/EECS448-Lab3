@@ -1,0 +1,32 @@
+body
+{
+	text-align:center;
+    background-color: pink;
+	background-image: url(https://images-na.ssl-images-amazon.com/images/I/B1KC7vIiYOS._CR0,0,3840,2880_._SL1000_.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+p.TayTay
+{
+    background-color: red;
+    color: white;
+    font-family: arial;
+    font-size: 18pt;
+}
+p
+{
+	background-color: black;
+    color: white;
+    font-family: Serif;
+    font-size: 18pt;
+}
+a:hover
+{
+    background-color: white;
+    color: red;
+}
+a
+{
+    background-color: red;
+    color: white;
+}

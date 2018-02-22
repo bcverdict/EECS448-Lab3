@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title> Nick's first web page </title>
+	</head>
+
+	<body>
+			<p id="Filler">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut metus eu quam rutrum cursus vel nec lorem. Mauris fringilla consequat felis ut auctor. Pellentesque bibendum mauris nec porttitor molestie. Vestibulum sodales ullamcorper congue. Sed eget efficitur mauris. Duis malesuada hendrerit lacinia. Vestibulum sit amet fringilla lectus. Nunc augue arcu, porttitor sed nunc vel, porttitor rutrum eros. Quisque interdum cursus cursus. In nec condimentum orci. Suspendisse hendrerit lectus eget ullamcorper rhoncus.</p>
+            <br>Border color:</br>
+			<br>Red value(0-255): <input type="text" id = "BoR"></br>
+			<br>Green value(0-255): <input type="text" id = "BoG"></br>
+			<br>Blue value(0-255): <input type="text" id = "BoB"></br>
+			<br>Border width: <input type="text" id = "BoW"></br>
+			<br></br>
+			<br>Background color</br>
+			<br>Red value(0-255): <input type="text" id = "BaR"></br>
+			<br>Green value(0-255): <input type="text" id = "BaG"></br>
+			<br>Blue value(0-255): <input type="text" id = "BaB"></br>
+			<button type="button" onClick= "Set()" id = "Set">Set colors</button>
+			
+            <script type ="text/javascript">
+			
+			
+			
+			
+			
+			function Set()
+			{
+				var BordRed = document.getElementById("BoR").value;
+				var BordGreen = document.getElementById("BoG").value;
+				var BordBlue = document.getElementById("BoB").value;
+				var BordWidth = document.getElementById("BoW").value;
+				
+				var BackRed = document.getElementById("BaR").value;
+				var BackGreen = document.getElementById("BaG").value;
+				var BackBlue = document.getElementById("BaB").value;
+				document.getElementById("Filler").style.border = "thick solid rgb("+BordRed+","+BordGreen+","+BordBlue+")";
+				document.getElementById("Filler").style.borderWidth = BordWidth+'px';
+				document.getElementById("Filler").style.backgroundColor = "rgb("+BackRed+","+BackGreen+","+BackBlue+")";
+			}
+            </script>
+	</body>
+</html>

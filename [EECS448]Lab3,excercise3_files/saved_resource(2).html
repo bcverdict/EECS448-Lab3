@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://fiddle.jshell.net/_display/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style id="stndz-style"></style>
+  
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+
+  
+  
+  
+
+  
+
+  <script type="text/javascript" src="./dummy.js.download"></script>
+
+  
+
+  
+
+  
+
+  
+    <link rel="stylesheet" type="text/css" href="./result-light.css">
+  
+
+  
+
+  <style type="text/css">
+    
+  </style>
+
+  <title></title>
+
+  
+    
+
+
+
+
+<script type="text/javascript">//<![CDATA[
+window.onload=function(){
+
+}//]]> 
+
+</script>
+
+  
+</head>
+
+<body>
+  
+	
+		<title> Nick's first web page </title>
+	
+
+	
+            <p id="Password">Enter Password</p>
+            <button type="button" onclick="Print()" id="Next">Next</button>
+            <input type="text" id="TextID" onkeypress="myFunc()">
+            <script type="text/javascript">
+            var D = "";
+            var str = "";
+            var SecStr = "";
+            var First = true;
+            function myFunc()
+            {
+            	if(First)
+              {
+            		str+=document.getElementById("TextID").value.charAt(document.getElementById("TextID").value.length-1);
+              }
+              else
+              {
+                SecStr+=document.getElementById("TextID").value.charAt(document.getElementById("TextID").value.length-1);
+              }
+                D+="*";
+                document.getElementById("TextID").value = D;
+            }
+            function Print()
+            {
+            		if(str.length+1<8)
+                {
+                alert("Password must be at least 8 characters long");
+                str = "";
+                SecStr = "";
+                D = "";
+                document.getElementById("TextID").value = "";
+                }
+            		else if(First)
+                {
+                  First = false;
+                  D="";
+                  str+=document.getElementById("TextID").value.charAt(document.getElementById("TextID").value.length-1);
+                  document.getElementById("TextID").value = "";
+                  document.getElementById("Password").innerHTML = "Validate Password";
+                  document.getElementById("Next").innerHTML = "Validate";
+                }
+                else
+                {
+                                  SecStr+=document.getElementById("TextID").value.charAt(document.getElementById("TextID").value.length-1);
+
+               
+                	if(str==SecStr)
+                  {
+                  alert("Validated!");
+                  }
+                  else
+                  {
+                  alert("Wrong");
+                  }
+                   str = "";
+                   SecStr = "";
+                   D = "";
+                   First = true;
+                   document.getElementById("TextID").value = "";
+                   document.getElementById("Password").innerHTML = "Enter Password";
+                   document.getElementById("Next").innerHTML = "Next";
+                }
+            }
+            </script>
+	
+
+  
+  <script>
+  // tell the embed parent frame the height of the content
+  if (window.parent && window.parent.parent){
+    window.parent.parent.postMessage(["resultsFrame", {
+      height: document.body.getBoundingClientRect().height,
+      slug: "None"
+    }], "*")
+  }
+</script>
+
+
+
+
+
+</body></html>
